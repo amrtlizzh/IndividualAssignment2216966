@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RM1 Campaign Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: turquoise;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    #program_image{
+        max-width: 100%;
+      height: auto;
+    text-align: center;
+    }
+
+    p{
+      max-width: 100%;
+      height: auto; 
+    }
+
+    #tagline{
+        max-width: 100%;
+      height: auto; 
+      text-align: center; 
+    }
+
+    #iium_logo{
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1{
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    } 
+    
+    h2 {
+      color: #333;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: turquoise;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+
+    button:hover {
+      background-color: turquoise;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: turquoise;
+      color: #fff;
+    }
+
+    #thankYouMessage {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+    
+  <header>
+    <div id="iium_logo">
+        <img src="IIUMLogo.png" alt="IIUM Logo" />
+    </div>
+    <h1>RM1 Campaign</h1>
+    <p>مَّثَلُ ٱلَّذِينَ يُنفِقُونَ أَمْوَٰلَهُمْ فِى سَبِيلِ ٱللَّهِ كَمَثَلِ حَبَّةٍ أَنۢبَتَتْ سَبْعَ سَنَابِلَ فِى كُلِّ سُنۢبُلَةٍۢ مِّا۟ئَةُ حَبَّةٍۢ ۗ وَٱللَّهُ يُضَـٰعِفُ لِمَن يَشَآءُ ۗ وَٱللَّهُ وَٰسِعٌ عَلِيمٌ
+        <br>
+       "The example of those who spend their wealth in the cause of Allah is that of a grain that sprouts into seven ears, each bearing one hundred grains. 
+       <br>
+       And Allah multiplies ˹the reward even more˺ to whoever He wills. For Allah is All-Bountiful, All-Knowing."
+       <br>
+       Al-Baqarah:261
+    </p>
+  </header>
+
+  
+
+  <section>
+    <p id="program_image">
+        <img src="RM1Logo.png" alt="Program Image" />
+    </p>
+    <p id="tagline">Let your contributions be perpetual for the pleasure of Allah swt</p>
+    <h2>Monthly Salary Deduction Form</h2>
+    <form action="#" method="post" id="salaryForm">
+        <form action="#" method="post" id="salaryForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="amount">Monthly Amount (RM):</label>
+            <input type="number" id="amount" name="amount" required>
+      
+            <label>Payment Method:</label>
+            <input type="radio" id="method1" name="paymentMethod" value="credit_card" required>
+            <label for="method1">Credit Card</label>
+      
+            <input type="radio" id="method2" name="paymentMethod" value="bank_transfer" required>
+            <label for="method2">Bank Transfer</label>
+      
+          </form>
+
+      <button type="submit" onclick="showThankYou()">Submit</button>
+    </form>
+    <div id="thankYouMessage">Thank you for your contribution!</div>
+  </section>
+
+  <section>
+    <h2>IIUM Endowment Fund Contact Information</h2>
+    <p>Contact us for more information:</p>
+    <p>Email: info@endowmentfund.iium.edu.my</p>
+    <p>Phone: +123 456 7890</p>
+  </section>
+
+  <script>
+    // Smooth scrolling effect for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Show thank you message and hide the form on submit
+    function showThankYou() {
+      document.getElementById('salaryForm').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+    }
+  </script>
+
+  <footer>
+    &copy; 2023 IIUM Endowment Fund
+  </footer>
+
+</body>
+</html>
